@@ -1,0 +1,320 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/*NAV BAR*/
+.navInd,
+a {
+  all: unset;
+}
+
+.navList {
+  width: 97%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  z-index: 1;
+}
+
+.navInd {
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+}
+
+a:visited,
+a:active {
+  color: white;
+}
+
+/*HEAD*/
+header {
+  width: 100%;
+  height: 35rem;
+  text-align: center;
+  background-image: url(images/82473357_493749331143201_2522375456183812096_o.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.headerImg {
+  transform: translateX(-0.5rem);
+}
+
+/*CUERPO*/
+.container {
+  max-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url(images/world.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 120px;
+}
+
+.shadow {
+  width: 100%;
+  height: 49rem;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    1deg,
+    rgba(255, 255, 255, 0) 5%,
+    rgb(1, 1, 1) 68%
+  );
+  position: absolute;
+  top: 0%;
+}
+
+.glitch {
+  color: white;
+  font-size: 6rem;
+  font-weight: 700;
+  z-index: 1;
+  animation: glitch 2s infinite;
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+}
+.glitch span {
+  position: absolute;
+  opacity: 0.8;
+}
+.glitch span:first-child {
+  animation: glitch 3s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.02em, -0.05em);
+}
+.glitch span:last-child {
+  animation: glitch 1s infinite;
+  clip-path: polygon(0% 60%, 100% 60%, 100% 100%, 0% 100%);
+  transform: translate(0.02em, 0.05em);
+}
+
+/*EPISODIOS*/
+.episodios {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.destacado {
+  width: 44.2%;
+  margin-bottom: 3rem;
+}
+
+#uno,
+#cuatro {
+  transform: translateY(-50px);
+}
+
+.noDestacados {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+}
+
+.episodiosInd {
+  width: 20%;
+}
+
+/*INFO*/
+
+.quienes {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem;
+}
+
+.foto {
+  width: 40rem;
+  height: 30rem;
+  background-image: url(images/misfits.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.infoCard {
+  width: 80%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.109);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.infoCard p {
+  width: 50%;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #f4f4f4;
+}
+
+/*FOOTER*/
+
+.footer {
+  text-align: center;
+  color: #f4f4f4;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.109);
+  padding: 0.5rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: 0.05em -0.02em 0 rgba(255, 0, 0, 0.75),
+      0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: 0.05em -0.02em 0 rgba(255, 0, 0, 0.75),
+      0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: -0.05em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.035em 0 rgba(0, 0, 255, 0.75);
+  }
+  84% {
+    text-shadow: -0.05em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.035em 0 rgba(0, 0, 255, 0.75);
+  }
+  85% {
+    text-shadow: -0.05em -0.06em 0 rgba(255, 0, 0, 0.75),
+      -0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: -0.05em -0.06em 0 rgba(255, 0, 0, 0.75),
+      -0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+      0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  nav {
+    display: none;
+  }
+  .headerImg {
+    display: none;
+  }
+
+  .noDestacados {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .destacado {
+    width: 90%;
+    transform: translateY(0px);
+  }
+
+  .episodiosInd {
+    width: 80%;
+    margin-top: 1rem;
+  }
+
+  .episodios {
+    height: fit-content;
+  }
+
+  #uno,
+  #cuatro {
+    transform: translateY(0px);
+  }
+
+  .glitch {
+    font-size: 3rem;
+  }
+
+  .quienes {
+    margin-top: 3rem;
+  }
+
+  .infoCard {
+    width: 95%;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .infoCard p {
+    width: 90%;
+    text-align: center;
+  }
+
+  .foto {
+    width: 100%;
+    height: 16rem;
+    background-size: cover;
+  }
+}
+
+/*CANCELAR LA ANIMACION*/
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
